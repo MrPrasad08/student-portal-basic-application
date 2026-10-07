@@ -1,0 +1,943 @@
+/* =====================================================
+   STUDENT MANAGEMENT SYSTEM
+   STABLE LIGHT THEME
+===================================================== */
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f4f7fb;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f4f7fb;
+  color: #26324a;
+}
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+.app {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+  width: 92%;
+  max-width: 1100px;
+  margin: 30px auto 25px;
+
+  background: linear-gradient(
+    135deg,
+    #5146e5,
+    #7839e8
+  );
+
+  border-radius: 18px;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(81, 70, 229, 0.20);
+}
+
+.header-content {
+  min-height: 150px;
+
+  padding: 30px 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.header p {
+  margin-top: 8px;
+
+  color: #eeeaff;
+
+  font-size: 15px;
+}
+
+.header-icon {
+  font-size: 48px;
+
+  filter:
+    drop-shadow(
+      0 5px 8px rgba(0, 0, 0, 0.20)
+    );
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main-container {
+  width: 92%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding-bottom: 50px;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message {
+  min-height: 52px;
+
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ecfdf5;
+
+  border: 1px solid #a7f3d0;
+
+  border-radius: 10px;
+
+  color: #047857;
+
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.message-close {
+  border: none;
+
+  background: transparent;
+
+  color: #047857;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.stats-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  min-height: 108px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(31, 41, 55, 0.06);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(31, 41, 55, 0.10);
+
+  transition: 0.2s;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.stat-content {
+  min-width: 0;
+}
+
+.stat-content p {
+  margin: 0 0 5px;
+
+  color: #68758a;
+
+  font-size: 13px;
+}
+
+.stat-content h2 {
+  margin: 0;
+
+  color: #26324a;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.card {
+  background: #ffffff;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 16px;
+
+  padding: 26px;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 8px 25px rgba(31, 41, 55, 0.055);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6048df;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.card-header h2 {
+  margin: 0;
+
+  color: #26324a;
+
+  font-size: 22px;
+
+  font-weight: 750;
+}
+
+.card-header p {
+  margin-top: 6px;
+
+  color: #68758a;
+
+  font-size: 14px;
+}
+
+.card-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0edff;
+
+  border-radius: 12px;
+
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.student-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px 20px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  color: #26324a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d9deea;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #26324a;
+
+  font-size: 14px;
+}
+
+.form-group input::placeholder {
+  color: #9aa4b5;
+}
+
+.form-group input:focus {
+  border-color: #6048df;
+
+  box-shadow:
+    0 0 0 3px rgba(
+      96,
+      72,
+      223,
+      0.10
+    );
+}
+
+.form-buttons {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 2px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #5146e5;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px rgba(
+      81,
+      70,
+      229,
+      0.18
+    );
+}
+
+.primary-btn:hover {
+  background: #4439d1;
+}
+
+.secondary-btn {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #eef1f6;
+
+  color: #4d596d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #e2e6ed;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+  display: flex;
+
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d9deea;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #26324a;
+
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #9aa4b5;
+}
+
+.search-box input:focus {
+  border-color: #6048df;
+
+  box-shadow:
+    0 0 0 3px rgba(
+      96,
+      72,
+      223,
+      0.10
+    );
+}
+
+
+/* =====================================================
+   SEARCH RESULT
+===================================================== */
+
+.student-result {
+  margin-top: 20px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  background: #f7f6ff;
+
+  border: 1px solid #ded9ff;
+
+  border-radius: 12px;
+}
+
+.result-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ddd6fe;
+
+  color: #5b3cc4;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.result-details h3 {
+  margin-bottom: 7px;
+
+  color: #26324a;
+
+  font-size: 17px;
+}
+
+.result-details p {
+  margin-top: 3px;
+
+  color: #66738a;
+
+  font-size: 13px;
+}
+
+.result-details strong {
+  color: #354056;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 750px;
+}
+
+thead {
+  background: #f7f8fb;
+}
+
+th {
+  padding: 14px;
+
+  text-align: left;
+
+  color: #657187;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #e5e9f0;
+}
+
+td {
+  padding: 15px 14px;
+
+  color: #344055;
+
+  font-size: 13px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+tbody tr:hover {
+  background: #fafaff;
+}
+
+
+/* =====================================================
+   ID
+===================================================== */
+
+.id-badge {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  background: #eef2ff;
+
+  color: #5146e5;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   STUDENT NAME
+===================================================== */
+
+.student-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ddd6fe;
+
+  color: #5b3cc4;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.student-name strong {
+  display: block;
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+.student-name small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9aa4b5;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   AGE
+===================================================== */
+
+.age-badge {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  background: #ecfdf3;
+
+  color: #16804b;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 750;
+}
+
+
+/* =====================================================
+   CITY
+===================================================== */
+
+.city-cell {
+  color: #344055;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.action-buttons {
+  display: flex;
+
+  gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 8px 11px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #edf5ff;
+
+  color: #1670d2;
+}
+
+.edit-btn:hover {
+  background: #dcecff;
+}
+
+.delete-btn {
+  background: #fff0f0;
+
+  color: #d63c3c;
+}
+
+.delete-btn:hover {
+  background: #ffe0e0;
+}
+
+
+/* =====================================================
+   REFRESH
+===================================================== */
+
+.refresh-btn {
+  border: none;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  background: #eef2ff;
+
+  color: #5146e5;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.refresh-btn:hover {
+  background: #e2e7ff;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty {
+  padding: 45px !important;
+
+  text-align: center;
+
+  color: #7c8799;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  padding: 15px;
+
+  text-align: center;
+
+  color: #7b8698;
+}
+
+footer p {
+  margin-bottom: 5px;
+
+  color: #566276;
+
+  font-size: 13px;
+
+  font-weight: 650;
+}
+
+footer span {
+  color: #9aa4b5;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .stats-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .header {
+    width: 94%;
+  }
+
+  .header-content {
+    padding: 25px;
+
+    min-height: 130px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .header-icon {
+    font-size: 38px;
+  }
+
+  .main-container {
+    width: 94%;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .student-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-buttons {
+    grid-column: auto;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box .primary-btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .header-content {
+    padding: 22px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .header-icon {
+    font-size: 30px;
+  }
+
+  .card-header {
+    gap: 10px;
+  }
+
+  .card-header h2 {
+    font-size: 19px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+}
